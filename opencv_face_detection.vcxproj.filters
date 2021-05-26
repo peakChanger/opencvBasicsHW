@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="opencv_face_detection.cpp">
+    <ClCompile Include="opencvBasicsHW.cpp">
       <Filter>來源檔案</Filter>
     </ClCompile>
   </ItemGroup>

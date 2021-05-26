@@ -20,8 +20,9 @@ void read_webCam_and_show(int deviceID);//讀取網路攝影機
 
 int main()
 {
-	//chapter_one(0);//(0照片，1影片，2網路攝影機)
-	//chapter_two();
+	//chapter_one(2);//(0照片，1影片，2網路攝影機)
+	chapter_two();
+	//chapter_three();
 }
 
 void chapter_one(int choose) {
@@ -54,6 +55,8 @@ void chapter_two() {
 	Mat img = imread(imageFile);
 	Mat imgGray, imgBlur, imgCanny, imgDilate, imgErode;
 
+	resize(img, img, Size(), 0.5, 0.5);//先縮放以方便做報告
+
 	//灰階
 	cvtColor(img, imgGray, COLOR_BGR2GRAY);
 
@@ -64,11 +67,11 @@ void chapter_two() {
 	Canny(imgBlur, imgCanny, 50, 150);
 
 	//Dilate 影像膨脹
-	Mat kernel = getStructuringElement(MORPH_RECT,Size(3,3));//增加Size增加找到的量，反之亦然
+	Mat kernel = getStructuringElement(MORPH_RECT, Size(3, 3));//增加Size增加找到的量，反之亦然
 	dilate(imgCanny, imgDilate, kernel);
 
 	//Erode 影像侵蝕
-	erode(imgDilate,imgErode,kernel);
+	erode(imgDilate, imgErode, kernel);
 
 	imshow("Original", img);
 	imshow("Gray Img", imgGray);
@@ -80,13 +83,30 @@ void chapter_two() {
 }
 
 void chapter_three() {
-	
+	string filePath = ".\\Data\\choco_vanilla.jpg";
+	Mat img = imread(filePath);
+	Mat imgResize,imgCrop;
+
+	//重新縮放影像尺寸
+	cout << img.size() << endl;
+	//resize(img, imgResize, Size(1110, 690));//指定縮小尺寸
+	resize(img, imgResize, Size(), 0.5, 0.5);//依比例縮小
+
+	//剪裁影像
+	Rect roi(700,280,500,500);//region of interest
+	imgCrop = img(roi);
+
+
+	imshow("Original", img);
+	imshow("Resize", imgResize);
+	imshow("Crop", imgCrop);
+	waitKey(0);
 }
 
 void read_image_and_show(string filePath) {
 	Mat img = imread(filePath);
 	imshow("img", img);
-	waitKey(0);
+	waitKey(0);//有waitKey才會停滯畫面，否則視窗不會保留
 }
 
 void read_video_and_play(string filePath) {
