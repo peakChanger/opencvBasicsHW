@@ -8,22 +8,62 @@
 using namespace std;
 using namespace cv;
 
+void chapter_one(int choose);//第一章教學 Read Image Video and Webcam
+void chapter_two();//第二章教學 Basic Function
+
 void read_image_and_show(string filePath);// 讀取照片
 void read_video_and_play(string filePath);//讀取影片
 void read_webCam_and_show(int deviceID);//讀取網路攝影機
 
+
+
 int main()
 {
+	//chapter_one(0);//(0照片，1影片，2網路攝影機)
+	chapter_two();
+}
+
+void chapter_one(int choose) {
+	string imageFile;
+	string videoFile;
+	int cameraID;
+	switch (choose)
+	{
+	case 0:
+		imageFile = ".\\Data\\ic_vanilla.png";
+		read_image_and_show(imageFile);
+		break;
+	case 1:
+		videoFile = ".\\Data\\guraLoading.mp4";
+		read_video_and_play(videoFile);
+		break;
+	case 2:
+		cameraID = 1;
+		read_webCam_and_show(cameraID);
+		break;
+	default:
+		printf("Error number");
+		break;
+	}
+	return;
+}
+
+void chapter_two() {
 	string imageFile = ".\\Data\\ic_vanilla.png";
-	//read_image_and_show(imageFile);
+	Mat img = imread(imageFile);
 
+	//灰階
+	Mat imgGray;
+	cvtColor(img, imgGray, COLOR_BGR2GRAY);
 
-	string videoFile = ".\\Data\\guraLoading.mp4";
-	//read_video_and_play(videoFile);
+	//高斯模糊
+	Mat imgBlur;
+	GaussianBlur(img, imgBlur, Size(7, 7),5,0);
 	
-
-	int cameraID = 1;
-	//read_webCam_and_show(cameraID);
+	imshow("Original",img);
+	imshow("Gray Img", imgGray);
+	imshow("Gaussian Blur", imgBlur);
+	waitKey(0);
 }
 
 void read_image_and_show(string filePath) {
@@ -47,7 +87,7 @@ void read_webCam_and_show(int deviceID) {
 	Mat img;
 	while (1) {
 		cap.read(img);
-		imshow("Webcam Frame",img);
+		imshow("Webcam Frame", img);
 		waitKey(20);
 	}
 }
