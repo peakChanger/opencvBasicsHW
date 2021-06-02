@@ -27,6 +27,15 @@
     <ClCompile Include="source\chapter_3.cpp">
       <Filter>資源檔</Filter>
     </ClCompile>
+    <ClCompile Include="source\chapter_4.cpp">
+      <Filter>資源檔</Filter>
+    </ClCompile>
+    <ClCompile Include="source\chapter_5.cpp">
+      <Filter>資源檔</Filter>
+    </ClCompile>
+    <ClCompile Include="source\chapter_6.cpp">
+      <Filter>資源檔</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header\chapter_1.h">
@@ -36,6 +45,15 @@
       <Filter>標頭檔</Filter>
     </ClInclude>
     <ClInclude Include="header\chapter_3.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="header\chapter_4.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="header\chapter_5.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="header\chapter_6.h">
       <Filter>標頭檔</Filter>
     </ClInclude>
   </ItemGroup>
