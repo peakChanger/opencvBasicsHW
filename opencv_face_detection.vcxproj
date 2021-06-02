@@ -143,6 +143,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="opencvBasicsHW.cpp" />
+    <ClCompile Include="source\chapter_1.cpp" />
+    <ClCompile Include="source\chapter_2.cpp" />
+    <ClCompile Include="source\chapter_3.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="header\chapter_1.h" />
+    <ClInclude Include="header\chapter_2.h" />
+    <ClInclude Include="header\chapter_3.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

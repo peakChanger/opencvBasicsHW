@@ -18,5 +18,25 @@
     <ClCompile Include="opencvBasicsHW.cpp">
       <Filter>來源檔案</Filter>
     </ClCompile>
+    <ClCompile Include="source\chapter_1.cpp">
+      <Filter>資源檔</Filter>
+    </ClCompile>
+    <ClCompile Include="source\chapter_2.cpp">
+      <Filter>資源檔</Filter>
+    </ClCompile>
+    <ClCompile Include="source\chapter_3.cpp">
+      <Filter>資源檔</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="header\chapter_1.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="header\chapter_2.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="header\chapter_3.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
