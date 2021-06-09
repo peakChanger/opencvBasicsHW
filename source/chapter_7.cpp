@@ -13,7 +13,7 @@ void chapter_seven() {
 
 	Mat imgDraw;
 	img.copyTo(imgDraw);
-	getCoutours(imgDil, imgDraw);
+	getShapes(imgDil, imgDraw);
 
 	imshow("Original",img);
 	//imshow("Image Gray",imgGray);
@@ -24,7 +24,7 @@ void chapter_seven() {
 	waitKey();
 }
 
-void getCoutours(Mat input_img, Mat& output_img) {
+void getShapes(Mat input_img, Mat& output_img) {
 
 	int areaSize = 1000;
 

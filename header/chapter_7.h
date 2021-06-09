@@ -10,4 +10,4 @@ using namespace cv;
 
 void chapter_seven();//²Ä¤C³¹ Shapes/Counter Detection
 
-void getCoutours(Mat input_img, Mat& output_img);
+void getShapes(Mat input_img, Mat& output_img);
