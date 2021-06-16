@@ -93,7 +93,7 @@ Point getCoutours(Mat input_img, Mat& output_img) {
 	vector<Vec4i> hierarchy;
 
 	findContours(input_img, contours, hierarchy, RETR_EXTERNAL, CHAIN_APPROX_SIMPLE);
-	//drawContours(output_img, contours, -1, Scalar(255, 0, 255));
+	input_img.copyTo(output_img);
 
 	Point myPoint(0, 0);
 

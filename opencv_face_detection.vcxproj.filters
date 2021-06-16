@@ -45,6 +45,12 @@
     <ClCompile Include="source\project_1.cpp">
       <Filter>資源檔</Filter>
     </ClCompile>
+    <ClCompile Include="source\project_2.cpp">
+      <Filter>資源檔</Filter>
+    </ClCompile>
+    <ClCompile Include="source\project_3.cpp">
+      <Filter>資源檔</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header\chapter_1.h">
@@ -72,6 +78,12 @@
       <Filter>標頭檔</Filter>
     </ClInclude>
     <ClInclude Include="header\project_1.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="header\project_2.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="header\project_3.h">
       <Filter>標頭檔</Filter>
     </ClInclude>
   </ItemGroup>
